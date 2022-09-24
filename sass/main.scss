@@ -4,9 +4,11 @@
 @import "./bace/reset";
 @import "./bace/common";
 
+@import "./component/container";
 @import "./component/accent";
 @import "./component/logo";
 @import "./component/backdrop";
+@import "./component/mob-menu";
 @import "./component/modal-window";
 @import "./component/modal-close-btn";
 @import "./component/modal-form";
@@ -14,7 +16,7 @@
 @import "./component/submit-button";
 @import "./component/section-title";
 @import "./component/section";
-@import "./component/container";
+
 
 @import "./layout/header";
 @import "./layout/hero";

@@ -17,13 +17,14 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <header class="page-header">
-      <div class="container page-header__container">
+      <div class="container">
+        <a href="./index.html" class="logo link"
+          ><span class="accent"> Web</span>Studio</a
+        >
         <nav class="header-nav">
-          <a href="./index.html" class="logo link"
-            ><span class="accent"> Web</span>Studio
-          </a>
           <ul class="header-nav__list list-style">
             <li class="header-nav__item">
               <a href="./index.html" class="link current header-nav__link"
@@ -41,13 +42,11 @@
           </ul>
         </nav>
         <ul class="header-info list-style">
-          <li>
+          <li class="header-info__item">
             <a href="mailto:info@devstudio.com" class="link header-info__link">
               <svg
                 aria-label="Лого пошти"
-                class="header-info__icon"
-                width="16"
-                height="12"
+                class="header-info__icon header-info__icon_email"
               >
                 <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
               </svg>
@@ -57,10 +56,8 @@
           <li>
             <a href="tel:+380961111111" class="link header-info__link">
               <svg
-                aria-label="Лого пошти"
-                class="header-info__icon"
-                width="10"
-                height="16"
+                aria-label="Лого телефон"
+                class="header-info__icon header-info__icon_tel"
               >
                 <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
               </svg>
@@ -68,9 +65,60 @@
             >
           </li>
         </ul>
+        <button type="button" class="open-mobile-btn" data-menu-open>
+          <svg class="open-mobile-btn__icon">
+            <use href="./images/svg/symbol-defs.svg#icon-burger-btn"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu" data-menu>
+        <div class="mob-menu__container container">
+          <button class="mob-menu__close-btn" data-menu-close>
+            <svg class="mob-menu__close-icon">
+              <use href="./images/svg/symbol-defs.svg#icon-Vector"></use>
+            </svg>
+          </button>
+
+          <ul class="mob-menu__list list-style">
+            <li class="mob-menu__item current_mob">
+              <a class="link" href="">Студія</a>
+            </li>
+            <li class="mob-menu__item">
+              <a class="link" href="">Портфоліо</a>
+            </li>
+            <li class="mob-menu__item">
+              <a class="link" href="">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="mob-contact list-style">
+            <li class="mob-contact__item">
+              <a href="tel:+380961111111" class="link"> +38 096 111 11 11</a>
+            </li>
+            <li class="mob-contact__item mob-contact__item_mail">
+              <a href="mailto:info@devstudio.com" class="link">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="social-media list-style">
+            <li class="social-media__item">
+              <a href="" class="social-media__link link">Instagram</a>
+            </li>
+            <li class="social-media__item">
+              <a href="" class="social-media__link link">Twitter</a>
+            </li>
+            <li class="social-media__item">
+              <a href="" class="social-media__link link">Facebook</a>
+            </li>
+            <li class="social-media__item">
+              <a href="" class="social-media__link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
-    <main>
+    <!-- <main>
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
@@ -158,34 +206,78 @@
           <h2 class="section-title section-doing__title">Чим ми займаємося</h2>
           <ul class="section-doing__list list-style">
             <li class="section-doing__item">
-              <img
-                src="./images/what_we_take_on.jpg"
-                alt="Десктопні додатки"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/des/what_we_take_on.webp    1x,
+                    ./images/des/what_we_take_on@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/des/what_we_take_on.jpg    1x,
+                    ./images/des/what_we_take_on@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/des/what_we_take_on.jpg"
+                  alt="Десктопні додатки"
+                  class="section-doing__img"
+                />
+              </picture>
               <div class="doing-info">
                 <h3 class="doing-info__text">додатки</h3>
               </div>
             </li>
             <li class="section-doing__item">
-              <img
-                src="./images/what_we_take_on_1.jpg"
-                alt="Мобільні додатки"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/des/what_we_take_on_1.webp    1x,
+                    ./images/des/what_we_take_on_1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/des/what_we_take_on_1.jpg    1x,
+                    ./images/des/what_we_take_on_1@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/des/what_we_take_on_1.jpg"
+                  alt="Мобільні додатки"
+                  class="section-doing__img"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="doing-info">
                 <h3 class="doing-info__text">Мобільні додатки</h3>
               </div>
             </li>
             <li class="section-doing__item">
-              <img
-                src="./images/what_we_take_on_2.jpg"
-                alt="Дизайнерські рішення"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/des/what_we_take_on_2.webp    1x,
+                    ./images/des/what_we_take_on_2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/des/what_we_take_on_2.jpg    1x,
+                    ./images/des/what_we_take_on_2@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/des/what_we_take_on_2.jpg"
+                  alt="Дизайнерські рішення"
+                  class="section-doing__img"
+                />
+              </picture>
               <div class="doing-info">
                 <h3 class="doing-info__text">Дизайнерські рішення</h3>
               </div>
@@ -198,12 +290,59 @@
           <h2 class="section-title command__titel">Наша команда</h2>
           <ul class="command-card__list list-style">
             <li class="command-card__item">
-              <img
-                src="./images/igor.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/des/igor.webp    1x,
+                    ./images/des/igor@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/des/igor.jpg 1x, ./images/des/igor@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tab/igor-tab.webp    1x,
+                    ./images/tab/igor-tab@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tab/igor-tab.jpg    1x,
+                    ./images/tab/igor-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mob/igor-mob.webp    1x,
+                    ./images/mob/igor-mob@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mob/igor-mob.jpg    1x,
+                    ./images/mob/igor-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/mob/igor-mob.jpg"
+                  alt="Ігор Дем'яненко"
+                  class="command-card__img"
+                />
+              </picture>
+
               <div class="command-card__info">
                 <h3 class="command-card__name">Ігор Дем'яненко</h3>
                 <p class="command-card__position">Product Designer</p>
@@ -257,12 +396,58 @@
               </div>
             </li>
             <li class="command-card__item">
-              <img
-                src="./images/olga.jpg"
-                alt="Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/des/olga.webp    1x,
+                    ./images/des/olga@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/des/olga.jpg 1x, ./images/des/olga@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tab/olga-tab.webp    1x,
+                    ./images/tab/olga-tab@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tab/olga-tab.jpg    1x,
+                    ./images/tab/olga-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mob/olga-mob.webp    1x,
+                    ./images/mob/olga-mob@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mob/olga-mob.jpg    1x,
+                    ./images/mob/olga-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/mob/olga-mob.jpg"
+                  alt="Ольга Рєпіна"
+                  class="command-card__img"
+                />
+              </picture>
               <div class="command-card__info">
                 <h3 class="command-card__name">Ольга Рєпіна</h3>
                 <p class="command-card__position">Frontend Developer</p>
@@ -316,12 +501,62 @@
               </div>
             </li>
             <li class="command-card__item">
-              <img
-                src="./images/mikolay.jpg"
-                alt="Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/des/mikolay.webp    1x,
+                    ./images/des/mikolay@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/des/mikolay.jpg    1x,
+                    ./images/des/mikolay@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tab/mikolay-tab.webp    1x,
+                    ./images/tab/mikolay-tab@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tab/mikolay-tab.jpg    1x,
+                    ./images/tab/mikolay-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mob/mikolay-mob.webp    1x,
+                    ./images/mob/mikolay-mob@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mob/mikolay-mob.jpg    1x,
+                    ./images/mob/mikolay-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/mob/mikolay-mob.jpg"
+                  lt="Микола Тарасов"
+                  class="command-card__img"
+                />
+              </picture>
+
               <div class="command-card__info">
                 <h3 class="command-card__name">Микола Тарасов</h3>
                 <p class="command-card__position">Marketing</p>
@@ -375,12 +610,62 @@
               </div>
             </li>
             <li class="command-card__item">
-              <img
-                src="./images/mihail.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/des/mihail.webp    1x,
+                    ./images/des/mihail@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/des/mihail.jpg    1x,
+                    ./images/des/mihail@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tab/mihail-tab.webp    1x,
+                    ./images/tab/mihail-tab@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tab/mihail-tab.jpg    1x,
+                    ./images/tab/mihail-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mob/mihail-mob.webp    1x,
+                    ./images/mob/mihail-mob@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mob/mihail-mob.jpg    1x,
+                    ./images/mob/mihail-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/mob/mihail-mob.jpg"
+                  alt="Михайло Єрмаков"
+                  class="command-card__img"
+                />
+              </picture>
+
               <div class="command-card__info">
                 <h3 class="command-card__name">Михайло Єрмаков</h3>
                 <p class="command-card__position">UI Designer</p>
@@ -578,11 +863,11 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- backdrop -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close type="button" class="modal-close-btn">
           <svg class="modal-close-btn__icon">
@@ -667,7 +952,8 @@
           </button>
         </form>
       </div>
-    </div>
+    </div> -->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

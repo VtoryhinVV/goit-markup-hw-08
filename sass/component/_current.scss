@@ -1,6 +1,7 @@
 .current {
   color: var(--color-accent);
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -13,4 +14,8 @@
     border: 2px solid var(--color-accent);
     border-radius: 2px;
   }
+}
+
+.current_mob {
+  color: var(--color-accent);
 }
