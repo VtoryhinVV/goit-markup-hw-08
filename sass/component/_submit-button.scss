@@ -1,0 +1,18 @@
+.button {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 5px;
+  transition: background var(--duration-cubic);
+  &:hover,
+  &:focus {
+    background: var(--act-button);
+  }
+}
