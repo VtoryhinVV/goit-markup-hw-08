@@ -120,6 +120,8 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -251,7 +253,6 @@ body {
 }
 .modal {
   position: absolute;
-  width: 528px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -261,6 +262,22 @@ body {
   padding: 40px;
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 90%;
+    height: 90%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
 .modal-close-btn {
   position: absolute;
   top: 8px;
@@ -287,7 +304,7 @@ body {
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--color-main-text);
   margin-bottom: 12px;
@@ -355,11 +372,11 @@ body {
 .custom-checkbox {
   margin-bottom: 30px;
   display: flex;
-  text-align: center;
   justify-content: center;
+  align-items: center;
   line-height: 1.71;
 }
-.custom-checkbox .custom-checkbox__input {
+.custom-checkbox__input {
   appearance: none;
   position: absolute;
 }
@@ -382,6 +399,11 @@ body {
 .custom-checkbox__input:focus + .custom-checkbox__icon {
   box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.5);
 }
+.custom-checkbox__label {
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--color-sub-text);
+}
 .custom-checkbox__link {
   color: var(--color-accent);
 }
@@ -391,6 +413,20 @@ body {
   align-self: center;
 }
 
+@media screen and (max-width: 479px) {
+  .modal-form__comment {
+    height: 30%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
+  .custom-checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .current {
   color: var(--color-accent);
   position: relative;
@@ -450,7 +486,6 @@ body {
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 .header-nav {
@@ -484,7 +519,8 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
   }
   .header-nav {
     display: flex;
@@ -578,25 +614,23 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
-  max-width: 1600px;
-  margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  width: 100%;
 }
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text);
-  max-width: 696px;
   margin: 0 auto 30px;
 }
 .hero__button {
-  padding: 10px 32px;
+  padding: 10px 24px;
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
@@ -626,7 +660,18 @@ body {
 */
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: url("../images/des/hero-bg.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/des/hero-bg.jpg");
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
+  .hero__button {
+    padding: 10px 32px;
   }
 }
 /* 
@@ -638,38 +683,6 @@ body {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/des/hero-bg@2x.jpg");
   }
 }
-.advantages__list {
-  display: flex;
-  column-gap: 30px;
-}
-
-.advantages__item {
-  width: 270px;
-}
-
-.advantages__icon {
-  width: 270px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--command-back);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-
-.advantages__titel {
-  font-size: 14px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.advantages__info {
-  line-height: 1.71;
-  color: var(--color-sub-text);
-}
-
 .section-doing {
   padding-bottom: 94px;
 }
