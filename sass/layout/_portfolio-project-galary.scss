@@ -25,11 +25,10 @@
   &__swap {
     position: relative;
     overflow: hidden;
-    height: 294px;
   }
 
   &__text-swap {
-    padding: 63px 24px;
+    padding: 20px 24px;
     font-size: 18px;
     line-height: 1.56;
     color: var(--text);
@@ -66,29 +65,17 @@
 }
 
 
+
+@media screen and (min-width: 768px) {
+  .project-galary__item {
+    width: calc(100% / 2 - 15px);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .project-galary {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-
     &__item {
       width: 370px;
-      border: 1px solid #eeeeee;
-      background-color: var(--background-site);
-    }
-
-    &__link {
-      width: 100%;
-      height: 100%;
-      display: block;
-      transition: box-shadow var(--duration-cubic);
-
-      &:hover,
-      &:focus {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-          0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-      }
     }
 
     &__swap {

@@ -43,6 +43,12 @@
   }
 }
 
+@media screen and (max-width: 430px) {
+  .project__list {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .project__list {
     justify-content: center;
@@ -50,7 +56,7 @@
     width: 100%;
   }
 
-  
+
 }
 
 @media screen and (min-width: 1200px) {
