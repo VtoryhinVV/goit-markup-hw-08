@@ -1,8 +1,9 @@
 .project__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   column-gap: 8px;
-  margin-bottom: 50px;
+  row-gap: 15px;
+  margin-bottom: 40px;
 }
 
 .project__button {
@@ -28,5 +29,25 @@
     color: var(--text);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .project__button {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project__list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project__list {
+    margin-bottom: 50px;
   }
 }

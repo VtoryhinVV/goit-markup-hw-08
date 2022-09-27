@@ -133,7 +133,12 @@
 @media screen and (max-width: 479px) {
   .modal-form__comment {
     height: 30%;
+  }
+}
 
+@media screen and (max-width: 420px) {
+  .modal__title {
+    font-size: 16px;
   }
 }
 
@@ -148,47 +153,3 @@
   }
 
 }
-
-
-// .custom-checkbox {
-//   margin-bottom: 30px;
-//   display: flex;
-//   text-align: center;
-//   justify-content: center;
-//   line-height: 1.71;
-//   .custom-checkbox__input {
-//     appearance: none;
-//     position: absolute;
-//   }
-
-//   &__icon {
-//     width: 16px;
-//     height: 15px;
-//     border: 1px solid var(--color-main-text);
-//     border-radius: 3px;
-//     cursor: pointer;
-//     margin-right: 10px;
-//     fill: #ffffff;
-//     .custom-checkbox__input:checked + & {
-//       background-color: var(--color-accent);
-//       border: none;
-//     }
-
-//     .custom-checkbox__input:checked + & {
-//       display: block;
-//     }
-
-//     .custom-checkbox__input:focus + & {
-//       box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.5);
-//     }
-//   }
-
-//   &__link {
-//     color: var(--color-accent);
-//   }
-// }
-
-// .modal-form__sumbit {
-//   padding: 10px 52px;
-//   align-self: center;
-// }

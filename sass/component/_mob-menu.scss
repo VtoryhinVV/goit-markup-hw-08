@@ -121,6 +121,16 @@
     }
 }
 
+@media screen and (max-width: 420px) {
+    .mob-contact__item {
+        font-size: 30px;
+    }
+
+    .social-media__item {
+        font-size: 12px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .mob-menu {
         display: none;
