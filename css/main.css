@@ -92,14 +92,14 @@ body {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 448px;
+    width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 720px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -175,6 +175,7 @@ body {
     position: relative;
     padding-left: 25px;
     padding-top: 48px;
+    padding-bottom: 48px;
     display: flex;
     flex-direction: column;
   }
@@ -468,11 +469,17 @@ body {
 
 .section-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -618,6 +625,7 @@ body {
   padding-top: 118px;
   padding-bottom: 118px;
   width: 100%;
+  margin: 0 auto;
 }
 .hero__title {
   font-weight: 900;
@@ -683,62 +691,117 @@ body {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/des/hero-bg@2x.jpg");
   }
 }
-.section-doing {
-  padding-bottom: 94px;
-}
-.section-doing__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.31;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.section-doing__list {
+.advantages__list {
   display: flex;
-  column-gap: 30px;
-}
-.section-doing__item {
-  position: relative;
-}
-.section-doing__img {
-  width: 370px;
-  height: 294px;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.doing-info {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.advantages__icon {
   width: 100%;
-  height: 70px;
-  background: var(--doing-info-bg);
+  height: 120px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: var(--command-back);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
-.doing-info__text {
+
+.advantages__titel {
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--text);
+  margin-bottom: 10px;
+  text-align: center;
 }
 
+.advantages__info {
+  line-height: 1.71;
+  color: var(--color-sub-text);
+}
+
+@media screen and (min-width: 768px) {
+  .advantages > .container {
+    padding: 0;
+  }
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .advantages__item {
+    width: 345px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages > .container {
+    padding: 0;
+  }
+  .advantages__item {
+    width: 270px;
+  }
+}
+.section-doing {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-doing {
+    padding-bottom: 94px;
+    display: block;
+  }
+  .section-doing__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.31;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .section-doing__list {
+    display: flex;
+    column-gap: 30px;
+  }
+  .section-doing__item {
+    position: relative;
+  }
+  .section-doing__img {
+    width: 370px;
+    height: 294px;
+  }
+  .doing-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--doing-info-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .doing-info__text {
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+}
 .command {
   background-color: var(--command-back);
 }
 .command__titel {
-  margin-bottom: 50px;
-}
-
-.command-card__list {
-  display: flex;
-  column-gap: 30px;
+  margin-bottom: 30px;
 }
 
 .command-card__item {
   background-color: var(--background-team-card);
-  width: 270px;
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+.command-card__item:nth-last-child(1) {
+  margin-bottom: 0;
 }
 
 .command-card__info {
@@ -795,6 +858,23 @@ body {
   fill: var(--text);
 }
 
+@media screen and (min-width: 768px) {
+  .command-card__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-self: center;
+  }
+  .command-card__item {
+    margin: 0;
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .command-card__item {
+    width: 270px;
+  }
+}
 .client__title {
   margin-bottom: 50px;
 }
